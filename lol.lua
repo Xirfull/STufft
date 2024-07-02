@@ -116,8 +116,7 @@ do
                 })
             end
 
-            local Game_Version = (game.PlaceVersion == 17438)
-            local Game_Version_Text = (Game_Version and "<font color=\"rgb(0, 255, 0)\">false</font>" or "<font color=\"rgb(255, 0, 0)\">true</font>")
+            
 
             local UpdateLabel = instance.new("TextLabel", {
                 Parent = UpdateList,
@@ -127,7 +126,6 @@ do
                 RichText = true,
                 Text = table.concat({
                     "Game name: <font color=\"rgb(115, 100, 215)\">"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."</font>\n\n",
-                    "Game has updated: [<font color=\"" .. (Game_Version and "rgb(0, 255, 0)" or "rgb(255, 0, 0)") .. "\">" .. Game_Version_Text .. "</font>]\n\n",
                     "[<font color=\"rgb(0, 255, 0)\">+</font>] Added silent aim\n\n",
                     "[<font color=\"rgb(0, 255, 0)\">+</font>] Added weapon icons\n\n",
                     "[<font color=\"rgb(0, 255, 0)\">+</font>] Added hitmarkers, tracers\n\n",
